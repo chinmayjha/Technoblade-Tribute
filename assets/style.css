@@ -17,7 +17,7 @@ html {
   overflow-y: auto;
 }
 body {
-  background-image: url("/assets/img/background.jpg");
+  background-image: url("../assets/img/background.jpg");
 
   /* Set a specific height */
   min-height: 58rem;
