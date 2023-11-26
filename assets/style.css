@@ -58,7 +58,7 @@ body {
     border-radius: 50%;
     height: 170px;
     top: 1rem;
-    left: 29%;
+    left: 42%;
     opacity: 1;
 }
 .avatar:hover {
@@ -71,7 +71,7 @@ transition: 1s;
     top: 9rem;
     font-size: 60px;
     color: white;
-    left: 6%;
+    left: 35%;
 }
 p {
   bottom: -182px;
