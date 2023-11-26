@@ -58,7 +58,7 @@ body {
     border-radius: 50%;
     height: 170px;
     top: 1rem;
-    left: 42%;
+    left: 29%;
     opacity: 1;
 }
 .avatar:hover {
@@ -71,7 +71,7 @@ transition: 1s;
     top: 9rem;
     font-size: 60px;
     color: white;
-    left: 35%;
+    left: 6%;
 }
 p {
   bottom: -182px;
@@ -90,7 +90,7 @@ p {
   top: 0;
   left: 0;
   width: 124%;
-  height: 123rem;
+  height: 144%;
   background-color: rgba(0, 0, 0, 0.425); /* black with 50% opacity */
 }
 /* footer */
