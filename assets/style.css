@@ -1,58 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rubik&display=swap');
 
 * {
-  user-zoom: none;
-  -webkit-user-drag: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  box-sizing: content-box;
+    user-zoom: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    box-sizing: content-box;
 }
+
 html {
-  scroll-behavior: smooth;
-  box-sizing: border-box;
-  cursor: default;
-  overflow-x:hidden;
-  overflow-y: auto;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    cursor: default;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
+
 body {
-  background-image: url("../assets/img/background.jpg");
+    background-image: url("../assets/img/background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+}
 
-  /* Set a specific height */
-  min-height: 58rem;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow-y: hidden;
-  }
-  /* scrollbar */
+/* scrollbar styles */
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+    width: 5px;
+    height: 5px;
 }
 
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-}
+/* Rest of scrollbar styles... */
 
-::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.3);
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-}
-
-::-webkit-scrollbar-thumb:window-inactive {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-  .avatar {
+/* General styling */
+.avatar {
     position: relative;
     background-color: pink;
     border-radius: 50%;
@@ -61,85 +47,93 @@ body {
     left: 44%;
     opacity: 1;
 }
+
 .avatar:hover {
-opacity: 0.6;
-transition: 1s;
+    opacity: 0.6;
+    transition: 1s;
 }
-  h3 {
+
+h3 {
     font-family: 'Rubik', sans-serif;
     position: absolute;
-    top: 9rem;
+    top: 11rem;
     font-size: 60px;
     color: white;
     left: 36%;
+    margin: 0;
 }
+
 p {
-  bottom: -182px;
-  position: absolute;
-  color: white;
-  font-family: 'Rubik', sans-serif;
-  font-size: 19px;
-  top: 20rem;
-  border: 6px solid salmon;
-  border-radius: 8px;
-  height: 36rem;
-  padding: 14px;
+    position: relative;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 19px;
+    padding: 14px;
+    border: 6px solid salmon;
+    border-radius: 8px;
+    margin-top: 30px;
+    top: 46px;
 }
+
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 62rem;
-  background-color: rgba(0, 0, 0, 0.425); /* black with 50% opacity */
-  /* overflow: hidden; */
-  /* overflow-y: hidden; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56rem; /* Initial height for larger screens */
+    min-height: 100vh; /* Fallback for smaller screens */
+    background-color: rgba(0, 0, 0, 0.425); /* black with 50% opacity */
 }
-/* footer */
+
 footer {
-  bottom: -19rem;
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  text-decoration: none;
-  color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-  font-weight: bolder;
-}
-
-footer a:hover {
-  color: salmon;
-}
-@media screen and (max-width: 768px) {
-  html {
-    height: 16rem;
-    width: 100vw;
-    position: absolute;
-  }
-  footer {
-    bottom: -258vh;
     width: 100%;
     text-align: center;
-    position: absolute;
-    text-decoration: none;
+    position: relative;
+    bottom: -21px;
+    padding: 20px;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
 }
-  .overlay{
-      height: 114rem;
-  }
-  h3{
-    left: 11%;
-  }
-  .avatar{
-    left: 35%;
-  }
-  p{
-    height: 87rem;
-  }
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+footer a:hover {
+    color: salmon;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    html {
+        height: auto;
+        position: static;
+    }
+
+    footer {
+        position: relative;
+        bottom: -16px;
+    }
+
+    .overlay {
+        height: 100vh;
+    }
+
+    h3 {
+        font-size: 40px;
+        left: 18%;
+        top: 7rem;
+    }
+
+    .avatar {
+        height: 100px;
+        left: 40%;
+    }
+
+    p {
+        height: auto;
+        min-height: 20rem;
+    }
 }
