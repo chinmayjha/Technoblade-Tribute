@@ -85,25 +85,66 @@ p {
     background-color: rgba(0, 0, 0, 0.425); /* black with 50% opacity */
 }
 
+/* Footer styles */
 footer {
-    width: 100%;
     text-align: center;
-    position: relative;
-    bottom: -21px;
     padding: 20px;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-footer a {
+    position: absolute;
+    color: white;
+    bottom: 0%;
+    font-family: Arial, Helvetica, sans-serif !important;
+  }
+  
+  footer a {
     color: white;
     text-decoration: none;
-    font-weight: bolder;
-}
-
-footer a:hover {
+  }
+  
+  footer a:hover {
     color: salmon;
-}
+  }
+  
+  /* Heart emoji and hover effect */
+  .footer p {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .heart {
+    cursor: pointer;
+  }
+  
+  .heart:hover::before {
+    content: 'LOVE';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 192, 203, 0.9); /* Light pink background */
+    color: black;
+    font-size: 12px;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .heart::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 192, 203, 0.9); /* Light pink background */
+    color: black;
+    font-size: 12px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
 
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
